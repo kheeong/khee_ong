@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">V_S</string>
+    <string-array name="my_foods">
+        <item>"Ice cream"</item>
+        <item>"Candy"</item>
+        <item>"c"</item>
+        <item>"d"</item>
+        <item>"e"</item>
+        <item>"f"</item>
+    </string-array>
+
+    <string-array name="ICE_LIST">
+        <item>"Chocolate"</item>
+        <item>"Valina"</item>
+        <item>"Peanut"</item>
+        <item>"Strawberry"</item>
+        <item>"Fruit"</item>
+        <item>"Coffee"</item>
+    </string-array>
+</resources>
