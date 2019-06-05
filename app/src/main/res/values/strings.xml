@@ -17,4 +17,13 @@
         <item>"Fruit"</item>
         <item>"Coffee"</item>
     </string-array>
+
+    <string-array name="candy">
+        <item>"Chocolate"</item>
+        <item>"Valina"</item>
+        <item>"Peanut"</item>
+        <item>"Strawberry"</item>
+        <item>"Fruit"</item>
+        <item>"Coffee"</item>
+    </string-array>
 </resources>

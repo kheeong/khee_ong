@@ -2,6 +2,7 @@ package com.example.user.v_s;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,6 +26,7 @@ public class IceCream extends AppCompatActivity {
         setContentView(R.layout.ice_cream);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         search_food = (ListView) findViewById(R.id.search_food);
 

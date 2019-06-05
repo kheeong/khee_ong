@@ -16,23 +16,23 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class Candy extends AppCompatActivity {
 
     ListView search_food;
     ArrayAdapter<String> adapter;
-    Class x;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.candy_crush);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         search_food = (ListView) findViewById(R.id.search_food);
 
         ArrayList<String> arrayFood = new ArrayList<>();
-        arrayFood.addAll(Arrays.asList(getResources().getStringArray(R.array.my_foods)));
+        arrayFood.addAll(Arrays.asList(getResources().getStringArray(R.array.candy)));
 
         adapter = new ArrayAdapter<String>(
-                MainActivity.this,
+                Candy.this,
                 android.R.layout.simple_list_item_1,
                 arrayFood
         );
@@ -50,21 +50,9 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                for (int i = 0; i < 1; i++) {
-                    Toast.makeText(MainActivity.this, String.valueOf(adapter.getItem(position)), Toast.LENGTH_SHORT).show();
-                    if (String.valueOf(adapter.getItem(position)).equals("Ice cream")) {
-                        x = IceCream.class;
-                    } else if (String.valueOf(adapter.getItem(position)).equals("Candy")) {
-                        x = Candy.class;
-                    } else {
-                        continue;
-                    }
-                    Intent intent = new Intent(MainActivity.this, x);
-                    startActivity(intent);
-                }
+                Toast.makeText(Candy.this, String.valueOf(adapter.getItem(position)), Toast.LENGTH_SHORT).show();
             }
         });
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
