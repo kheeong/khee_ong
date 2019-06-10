@@ -21,7 +21,7 @@ public class Oreo_Ice_Cream extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ice_cream);
+        setContentView(R.layout.oreo_ice_cream);
 
     }
 }
