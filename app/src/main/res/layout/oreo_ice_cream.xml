@@ -12,6 +12,7 @@
         android:padding="16dp"
         android:scaleType="centerCrop"
         android:contentDescription="@null"
+        android:src="@drawable/oreo_ice_cream_pic"
         />
 
     <LinearLayout
