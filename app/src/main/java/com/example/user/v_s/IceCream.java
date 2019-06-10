@@ -20,6 +20,7 @@ import java.util.Arrays;
 public class IceCream extends AppCompatActivity {
     ListView search_food;
     ArrayAdapter<String> adapter;
+    Class x;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +52,18 @@ public class IceCream extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(IceCream.this,String.valueOf(adapter.getItem(position)),Toast.LENGTH_SHORT).show();
+                for (int i = 0; i < 1; i++) {
+                    Toast.makeText(IceCream.this, String.valueOf(adapter.getItem(position)), Toast.LENGTH_SHORT).show();
+                    if (String.valueOf(adapter.getItem(position)).equals("Orea Ice Cream")) {
+                        x = IceCream.class;
+                    } else {
+                        continue;
+                    }
+                    Intent intent = new Intent(IceCream.this, x);
+                    startActivity(intent);
+                }
             }
+
         });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
