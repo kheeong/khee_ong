@@ -55,7 +55,7 @@ public class IceCream extends AppCompatActivity {
                 for (int i = 0; i < 1; i++) {
                     Toast.makeText(IceCream.this, String.valueOf(adapter.getItem(position)), Toast.LENGTH_SHORT).show();
                     if (String.valueOf(adapter.getItem(position)).equals("Orea Ice Cream")) {
-                        x = IceCream.class;
+                        x = Oreo_Ice_Cream.class;
                     } else {
                         continue;
                     }
