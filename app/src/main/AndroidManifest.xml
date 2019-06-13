@@ -24,6 +24,9 @@
         <activity
             android:name=".Candy"
             android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".Compare"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

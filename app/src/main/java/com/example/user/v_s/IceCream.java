@@ -2,7 +2,6 @@ package com.example.user.v_s;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,12 +9,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static com.example.user.v_s.R.id.button;
 
 public class IceCream extends AppCompatActivity {
     ListView search_food;
@@ -25,10 +27,14 @@ public class IceCream extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ice_cream);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IceCream.this, Compare.class);
+            }
+        });
         search_food = (ListView) findViewById(R.id.search_food);
 
         ArrayList<String> arrayFood = new ArrayList<>();
