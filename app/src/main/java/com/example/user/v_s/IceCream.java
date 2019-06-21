@@ -2,7 +2,6 @@ package com.example.user.v_s;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -17,17 +17,24 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static com.example.user.v_s.R.id.button;
+
 public class IceCream extends AppCompatActivity {
     ListView search_food;
     ArrayAdapter<String> adapter;
+    Class x;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ice_cream);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IceCream.this, Compare.class);
+            }
+        });
         search_food = (ListView) findViewById(R.id.search_food);
 
         ArrayList<String> arrayFood = new ArrayList<>();
@@ -51,8 +58,18 @@ public class IceCream extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(IceCream.this,String.valueOf(adapter.getItem(position)),Toast.LENGTH_SHORT).show();
+                for (int i = 0; i < 1; i++) {
+                    Toast.makeText(IceCream.this, String.valueOf(adapter.getItem(position)), Toast.LENGTH_SHORT).show();
+                    if (String.valueOf(adapter.getItem(position)).equals("Oreo Ice Cream")) {
+                        x = Oreo_Ice_Cream.class;
+                    } else {
+                        continue;
+                    }
+                    Intent intent = new Intent(IceCream.this, x);
+                    startActivity(intent);
+                }
             }
+
         });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

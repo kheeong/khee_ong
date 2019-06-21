@@ -19,7 +19,13 @@
         <activity android:name=".IceCream"
             android:parentActivityName=".MainActivity"></activity>
         <activity
+            android:name=".Oreo_Ice_Cream"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
             android:name=".Candy"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".Compare"
             android:parentActivityName=".MainActivity"></activity>
     </application>
 
