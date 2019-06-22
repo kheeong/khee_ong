@@ -24,8 +24,7 @@
         <activity
             android:name=".Candy"
             android:parentActivityName=".MainActivity"></activity>
-        <activity
-            android:name=".Compare"
+        <activity android:name=".Scanner"
             android:parentActivityName=".MainActivity"></activity>
     </application>
 
